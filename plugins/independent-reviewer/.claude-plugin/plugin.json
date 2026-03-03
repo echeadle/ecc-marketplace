@@ -6,6 +6,5 @@
     "author": {
         "name": "Edward Cheadle",
         "email": "echeadle@gmail.com"
-    },
-    "hooks": "./hooks/hooks.json"
+    }
 }
