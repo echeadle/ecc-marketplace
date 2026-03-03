@@ -1,0 +1,19 @@
+{
+  "name": "ecc-marketplace",
+  "owner": {
+    "name": "echeadle"
+  },
+  "metadata": {
+    "description": "A collection of Claude Code plugins by echeadle",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "review-plugin",
+      "source": "./plugins/review-plugin",
+      "description": "Adds a /review skill for quick code reviews",
+      "version": "1.0.0"
+    }
+  ]
+}
