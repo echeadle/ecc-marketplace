@@ -4,8 +4,9 @@
     "name": "Edward Cheadle"
   },
   "metadata": {
-    "description": "A collection of Claude Code plugins by echeadle",
+    "description": "A collection of Claude Code plugins by Edward Cheadle",
     "version": "1.0.0",
+    "license": "MIT",
     "pluginRoot": "./plugins"
   },
   "plugins": [

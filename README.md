@@ -1,6 +1,6 @@
 # ecc-marketplace
 
-A Claude Code plugin marketplace by echeadle.
+A Claude Code plugin marketplace by Edward Cheadle.
 
 ## Structure
 
@@ -89,7 +89,7 @@ Users can update their local copy with:
      "description": "What the plugin does",
      "version": "1.0.0",
      "author": {
-       "name": "echeadle"
+       "name": "Edward Cheadle"
      }
    }
    ```
