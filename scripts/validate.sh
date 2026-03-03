@@ -4,6 +4,8 @@
 
 set -euo pipefail
 
+command -v jq >/dev/null 2>&1 || { printf '\033[1;31m%s\033[0m\n' "ERROR: jq is required but not installed."; exit 1; }
+
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 MARKETPLACE="$ROOT/.claude-plugin/marketplace.json"
 ERRORS=0
@@ -41,7 +43,7 @@ echo "Author: $MARKETPLACE_AUTHOR"
 echo
 
 # Iterate over each plugin entry in marketplace.json
-PLUGIN_COUNT=$(jq '.plugins | length' "$MARKETPLACE")
+PLUGIN_COUNT=$(jq '.plugins | length' "$MARKETPLACE" 2>/dev/null || echo 0)
 for i in $(seq 0 $((PLUGIN_COUNT - 1))); do
   PLUGIN_NAME=$(jq -r ".plugins[$i].name" "$MARKETPLACE")
   PLUGIN_SOURCE=$(jq -r ".plugins[$i].source" "$MARKETPLACE")
@@ -107,7 +109,7 @@ for i in $(seq 0 $((PLUGIN_COUNT - 1))); do
   if [ ! -d "$SKILLS_DIR" ]; then
     error "[$PLUGIN_NAME] No skills/ directory found"
   else
-    SKILL_COUNT=$(find "$SKILLS_DIR" -name "SKILL.md" | wc -l)
+    SKILL_COUNT=$(find "$SKILLS_DIR" -maxdepth 2 -name "SKILL.md" | wc -l)
     if [ "$SKILL_COUNT" -eq 0 ]; then
       error "[$PLUGIN_NAME] No SKILL.md files found in skills/"
     else
