@@ -35,7 +35,7 @@ if ! jq empty "$MARKETPLACE" 2>/dev/null; then
 fi
 
 MARKETPLACE_NAME=$(jq -r '.name' "$MARKETPLACE")
-MARKETPLACE_AUTHOR=$(jq -r '.author.name' "$MARKETPLACE")
+MARKETPLACE_AUTHOR=$(jq -r '.owner.name' "$MARKETPLACE")
 MARKETPLACE_LICENSE=$(jq -r '.metadata.license // empty' "$MARKETPLACE")
 
 echo "Marketplace: $MARKETPLACE_NAME"
@@ -90,11 +90,11 @@ for i in $(seq 0 $((PLUGIN_COUNT - 1))); do
     info "Version: OK ($PJ_VERSION)"
   fi
 
-  # Check author matches marketplace author
-  if [ -n "$PJ_AUTHOR" ] && [ "$PJ_AUTHOR" != "$MARKETPLACE_AUTHOR" ]; then
-    error "[$PLUGIN_NAME] Author mismatch: marketplace says '$MARKETPLACE_AUTHOR', plugin.json says '$PJ_AUTHOR'"
+  # Check plugin has an author
+  if [ -z "$PJ_AUTHOR" ]; then
+    error "[$PLUGIN_NAME] Missing author.name in plugin.json"
   else
-    info "Author: OK"
+    info "Author: $PJ_AUTHOR"
   fi
 
   # Check license matches marketplace license

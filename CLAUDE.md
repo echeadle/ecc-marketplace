@@ -35,11 +35,12 @@ claude --plugin-dir ./plugins/review-plugin
 1. Create `plugins/<name>/.claude-plugin/plugin.json` and `plugins/<name>/skills/<skill>/SKILL.md`
 2. Add a corresponding entry to `.claude-plugin/marketplace.json` under `plugins[]`
 3. Run `./scripts/validate.sh` to verify consistency
-4. Author name and license must match the marketplace-level values
+4. Each plugin must have an `author` field in its plugin.json
 
 ## Conventions
 
-- All metadata fields (name, version, author, license) must be consistent between marketplace.json and each plugin.json
+- Plugin name and version must be consistent between marketplace.json and each plugin.json
+- `owner` is a marketplace-level field (who curates the catalog); `author` is a plugin-level field (who created the plugin) — these can differ
 - Plugin source paths in marketplace.json use `./plugins/<name>` format
 - Skills are invoked as `/plugin-name:skill-name`
 - Planning docs in `Planning/` are gitignored reference material, not part of the distributed marketplace

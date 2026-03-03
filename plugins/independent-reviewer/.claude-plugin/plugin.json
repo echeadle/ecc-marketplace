@@ -4,7 +4,8 @@
     "version": "1.0.0",
     "license": "MIT",
     "author": {
-        "name": "Edward Cheadle"
+        "name": "Edward Cheadle",
+        "email": "echeadle@gmail.com"
     },
     "hooks": "./hooks/hooks.json"
 }

@@ -6,6 +6,7 @@
   "keywords": ["code-review", "review", "quality"],
   "repository": "https://github.com/echeadle/ecc-marketplace",
   "author": {
-    "name": "Edward Cheadle"
+    "name": "Edward Cheadle",
+    "email": "echeadle@gmail.com"
   }
 }
