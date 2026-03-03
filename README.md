@@ -42,14 +42,16 @@ From within Claude Code:
 
 ### Validate the marketplace
 
+Run the included validation script to check metadata consistency:
+
+```bash
+./scripts/validate.sh
+```
+
+Or use the Claude Code built-in validator:
+
 ```bash
 claude plugin validate .
-```
-
-Or from within Claude Code:
-
-```
-/plugin validate .
 ```
 
 ## Sharing
