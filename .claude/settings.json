@@ -1,5 +1,6 @@
 {
   "enabledPlugins": {
+    "independent-reviewer@ecc-marketplace": true,
     "review-plugin@ecc-marketplace": true
   }
 }

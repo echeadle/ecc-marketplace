@@ -15,6 +15,12 @@
       "source": "./plugins/review-plugin",
       "description": "Adds a /review skill for quick code reviews",
       "version": "1.0.0"
+    },
+    {
+      "name": "independent-reviewer",
+      "source": "./plugins/independent-reviewer",
+      "description": "Carry out an independent review of all changes since the last commit",
+      "version": "1.0.0"
     }
   ]
 }
