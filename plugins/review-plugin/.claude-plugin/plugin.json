@@ -2,7 +2,10 @@
   "name": "review-plugin",
   "description": "Adds a /review skill for quick code reviews",
   "version": "1.0.0",
+  "license": "MIT",
+  "keywords": ["code-review", "review", "quality"],
+  "repository": "https://github.com/echeadle/ecc-marketplace",
   "author": {
-    "name": "echeadle"
+    "name": "Edward Cheadle"
   }
 }

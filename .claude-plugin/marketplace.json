@@ -1,7 +1,7 @@
 {
   "name": "ecc-marketplace",
-  "owner": {
-    "name": "echeadle"
+  "author": {
+    "name": "Edward Cheadle"
   },
   "metadata": {
     "description": "A collection of Claude Code plugins by echeadle",

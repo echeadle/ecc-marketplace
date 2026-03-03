@@ -15,7 +15,6 @@ ecc-marketplace/
 │       └── skills/
 │           └── review/
 │               └── SKILL.md      # /review-plugin:review skill
-└── Planning/                     # Reference docs from Claude docs site
 ```
 
 ## Testing locally
