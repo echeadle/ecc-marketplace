@@ -1,0 +1,36 @@
+{
+  "name": "plugin-template",
+  "version": "1.0.0",
+  "description": "A complete skeleton plugin demonstrating every capability",
+  "author": {
+    "name": "Your Name",
+    "email": "you@example.com",
+    "url": "https://github.com/yourname"
+  },
+  "homepage": "https://docs.example.com/plugin-template",
+  "repository": "https://github.com/yourname/plugin-template",
+  "license": "MIT",
+  "keywords": ["template", "skeleton", "example"],
+
+  "_comment_skills": "Default: ./skills/ — only override if using a non-standard path",
+  "skills": "./skills/",
+
+  "_comment_agents": "Default: ./agents/ — only override if using a non-standard path",
+  "agents": "./agents/",
+
+  "_comment_commands": "Array of paths to command markdown files or directories",
+  "commands": [
+    "./commands/"
+  ],
+
+  "_comment_hooks": "Default: ./hooks/hooks.json is auto-loaded. Only set this for ADDITIONAL hook files",
+
+  "_comment_mcpServers": "Can be inline (object) or a path to a JSON file",
+  "mcpServers": "./mcp-config.json",
+
+  "_comment_outputStyles": "Directory containing custom output style definitions",
+  "outputStyles": "./styles/",
+
+  "_comment_lspServers": "Can be inline (object) or reference .lsp.json at plugin root",
+  "lspServers": "./.lsp.json"
+}

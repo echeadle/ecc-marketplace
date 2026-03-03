@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "example-server": {
+      "command": "${CLAUDE_PLUGIN_ROOT}/servers/example-server",
+      "args": ["--config", "${CLAUDE_PLUGIN_ROOT}/config.json"],
+      "env": {
+        "DATA_PATH": "${CLAUDE_PLUGIN_ROOT}/data"
+      }
+    },
+    "example-npx-server": {
+      "command": "npx",
+      "args": ["@example/mcp-server", "--plugin-mode"],
+      "cwd": "${CLAUDE_PLUGIN_ROOT}"
+    }
+  }
+}
