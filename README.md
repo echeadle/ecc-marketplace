@@ -76,6 +76,10 @@ Users can update their local copy with:
 
 ## Adding a new plugin
 
+A **plugin template** is available at [`plugins/plugin-template/`](plugins/plugin-template/) with a complete reference guide in [`PLUGIN_TEMPLATE.md`](plugins/plugin-template/PLUGIN_TEMPLATE.md). It documents every plugin capability — skills, agents, commands, hooks, MCP servers, LSP servers, and output styles — with examples and the full `plugin.json` schema. Copy the template as a starting point and remove the components you don't need.
+
+Alternatively, you can create a plugin from scratch:
+
 1. Create the plugin directory:
 
    ```bash
